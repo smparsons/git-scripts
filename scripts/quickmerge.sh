@@ -20,7 +20,7 @@ do
     checkout_result=$(git checkout $destination_branch 2>&1)
 
     if [[ $checkout_result == "error"* ]]; then
-        echo "$destination_branch doesn't exist! Moving to next destination branch...";
+        echo "$destination_branch doesn't exist! Moving to next destination branch..."
     else 
         merge_result=$(printf ":wq" | git merge $source_branch)
 
